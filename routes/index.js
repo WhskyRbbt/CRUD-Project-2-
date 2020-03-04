@@ -8,17 +8,17 @@ router.get('/auth/google', passport.authenticate('google', {
 ));
 router.get('/oauth2callback', passport.authenticate('google', {
   successRedirect : '/users',
-  failureRedirect : '/users'
+  failureRedirect : '/'
 }
 ));
 
 router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/users');
+  res.redirect('/');
 });
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Please enter your credentials', });
+  res.render('index', { title: 'Entrance Below', });
 });
 
 module.exports = router;

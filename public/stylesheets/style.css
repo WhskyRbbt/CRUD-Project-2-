@@ -104,3 +104,7 @@ div {
   justify-content: space-evenly;
   border-color: red;
 }
+
+.navBar:last-child {
+float: right
+}
