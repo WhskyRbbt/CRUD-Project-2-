@@ -5,27 +5,32 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+require('dotenv').config();
 
 var app = express();
 
 require('./config/database');
 require('./config/passport');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-
+// mount the session middleware
 app.use(session({
-  secret:'loggy log log',
+  secret: 'SEI Rocks!',
   resave: false,
   saveUninitialized: true
 }));

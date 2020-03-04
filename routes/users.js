@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const charCtrl = require('../controllers/index')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('will be the OAUTH landing page');
-});
+router.get('/', charCtrl.index);
 
 module.exports = router;

@@ -2,10 +2,24 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>  
+    <script src="https://apis.google.com/js/api:client.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <div style="background-image: url('/public/images/ESO 3 Faction');"></div>
     <h1><%= title %></h1>
-    <p>All Hail!!! M'lord, </br></br>Please enter your login information below.</p>
+    <p>LOGIN PAGE</p>
+    <div class="col s12 m6 offset-m3 center-align">
+      <a class="oauth-container btn darken-4 white black-text" href="/auth/google" style="text-transform:none">
+          <div class="left">
+              <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+          </div>
+          Sign in with Google
+      </a>
+  </div>
   </body>
 </html>
