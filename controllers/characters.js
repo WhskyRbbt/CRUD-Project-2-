@@ -4,6 +4,7 @@ const Character = require('../models/character');
 module.exports = {
     new: newChar,
     create,
+    // update
     //index
 };
 
@@ -19,10 +20,14 @@ function newChar(req, res) {
 }
 
 function create(req, res) {
-    console.log("this is the body " + req.body);
+    console.log("REQ BODY ", req.body);
     let char = new Character(req.body);
     char.save((err, char) => {
         res.redirect('/users')
     })
         
-    };
+};
+
+    // function update(req,res) {
+    //     console.log("this is to be upatded = " + req.body);
+    // }

@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 // mount the session middleware
 app.use(session({
-  secret: 'SEI Rocks!',
+  secret: 'Battle to commence',
   resave: false,
   saveUninitialized: true
 }));

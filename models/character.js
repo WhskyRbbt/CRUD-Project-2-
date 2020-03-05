@@ -14,19 +14,19 @@ const charSchema = new Schema({
         type: String,
         enum: ['human', 'panther', 'lizard'],
         required: true,
-        default: "human"
+        default: ""
     },
     gender: {
         type: String,
         enum: ['male', 'female'],
         required: true,
-        default: "male"
+        default: ""
     },
     focus: {
         type: String,
         enum: ['warrior', 'mage', 'rogue'],
         required: true,
-        default: "warrior"
+        default: ""
     },
     role: {
         type: String,
@@ -37,4 +37,4 @@ const charSchema = new Schema({
     user:{type: Schema.Types.ObjectId, ref: 'User'}
 })
 
-module.exports = mongoose.model('characters', charSchema)
+module.exports = mongoose.model('Character', charSchema)

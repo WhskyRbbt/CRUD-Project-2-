@@ -1,18 +1,14 @@
 <%- include('../partials/header') %>
 <title>Dragon's Den</title>
 
-    <div class="flex"  id="curChar">
-            Character poop
-    </div>
-    <div class="flex" id="charList">
-            List poop
-    </div>
-    <div class="flex" id="stats">
-            Stat poop
-    </div>
     <ul>
     <% character.forEach((char, index) => { %>
-        <li style="color: aqua;" > <%= char.name %> </li> <br> <br>
+        <li style="color: rgb(228, 8, 8);" > <%= char.name %> </li> <br>
+        <li style="color: royalblue;" > Race: <%= char.race %> </li> <br> 
+        <li style="color: royalblue;" > Gender:<%= char.gender %> </li> <br>
+        <li style="color: royalblue;" > Battle Focus: <%= char.focus %> </li> <br>
+        <li style="color: royalblue;" > Battle Role:<%= char.role %> </li>  
+     <br><br>
     <% }) %>
     </ul>
 

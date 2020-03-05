@@ -33,7 +33,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: seashell;
 }
 
 li {
@@ -84,21 +84,6 @@ li.dropdown {
   justify-content: space-evenly;
 }
 
-#curChar {
-  display: flex;
-  background-color: grey;
-
-}
-
-#charList {
-  display: flex;
-  background-color: grey;
-}
-
-#stats {
-  display: flex;
-  background-color: grey;
-}
 div {
   display: flex;
   justify-content: space-evenly;
@@ -127,4 +112,7 @@ select, #name {
   width: 10%;
   height: 5%;
   align-content: center;
+}
+.navBar {
+  background-color: royalblue;
 }
