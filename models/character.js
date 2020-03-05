@@ -7,22 +7,32 @@ const charSchema = new Schema({
     name: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        default: ""
     },
     race: {
         type: String,
         enum: ['human', 'panther', 'lizard'],
-        require: true
+        required: true,
+        default: "human"
     },
     gender: {
         type: String,
         enum: ['male', 'female'],
-        require: true
+        required: true,
+        default: "male"
     },
     focus: {
         type: String,
         enum: ['warrior', 'mage', 'rogue'],
-        required: true
+        required: true,
+        default: "warrior"
+    },
+    role: {
+        type: String,
+        enum: ['damage-dealer', 'healer', 'crowd-control'],
+        required: true,
+        default: "damage-dealer"
     },
     user:{type: Schema.Types.ObjectId, ref: 'User'}
 })

@@ -114,3 +114,17 @@ float: right
   bottom: 3%;
   align-content: space-between;
 }
+form {
+font-size: 1rem;
+}
+
+select, #name {
+  width: 20%;
+  height: 15%;
+}
+
+#sub {
+  width: 10%;
+  height: 5%;
+  align-content: center;
+}

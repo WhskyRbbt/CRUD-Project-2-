@@ -19,11 +19,10 @@ function newChar(req, res) {
 }
 
 function create(req, res) {
-    console.log("this is " + req.user);
+    console.log("this is the body " + req.body);
     let char = new Character(req.body);
     char.save((err, char) => {
         res.redirect('/users')
     })
         
-    
-};
+    };

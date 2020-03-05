@@ -4,34 +4,46 @@
     <h3>Design your hero</h3>
     
     <form action="/users/<%=user.id%>/characters" method="POST" > 
-        <label for="name">Character Name:</label></br>
-            <input type="text" id="name" name="name"></br></br>
-        <label for="race">Race</label></br>
-            <input type="radio" checked="checked" value="human" name="race">Human
-            <input type="radio" value="lizard" name="race">Reptilia
-            <input type="radio" value="panther" name="race">Patherkin</br></br>
-            
-            <label for="gender">Gender</label></br>
-            <input type="radio" checked="checked" value="male" name="gender">Male
-            <input type="radio" value="female" name="gender">Female</br></br>
-
-            <label for="focus">Battle Focus</label></br>
-                <input type="radio" checked="checked" value="warrior" name="focus">Warrior
-                <input type="radio" value="mage" name="focus">Mage
-                <input type="radio" value="rogue" name="focus">Rogue</br></br>
-            <!-- <label for="race">Choose a race:</label></br>
+        <label for="name">Character Name:</label>
+    </br>
+            <input required type="text" id="name" name="name" placeholder="Enter Name">
+        </br></br>
+            <label for="race">Choose a race:</label>
+        </br>
             <select id="race" name="race" form="race">
+                <option disabled selected hidden>Select</option>
                 <option value="lizard">Lizard-folk</option>
                 <option value="panther">Pantherkin</option>
                 <option value="human">Human</option>
-            </select></br></br>
-        <label for="focus">Choose your combat focus:</label></br>
+            </select>
+        </br></br>
+            <label for="gender">Gender</label>
+        </br>
+            <select id="gender" name="gender" form="gender">
+                <option disabled selected hidden>Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        <br><br>
+            <label for="focus">Choose your combat focus:</label>
+        </br>
             <select id="focus" name="focus" form="focus">
+                <option disabled selected hidden>Select</option>
                 <option value="warrior">Warrior</option>
                 <option value="mage">Mage</option>
                 <option value="rogue">Rogue</option>
-            </select> -->
-        <input id="sub" type="submit" value="new-character">
-    </form>
-
+            </select>
+        </br></br>
+            <label for="role">Choose your battle role:</label>
+        </br>
+            <select id="role" name="role" form="role">
+                <option disabled selected hidden>Select</option>
+                <option value="damage-dealer">Damage Dealer</option>
+                <option value="healer">Healer</option>
+                <option value="crowd-control">Crowd Control</option>
+            </select>        
+        </br></br>
+            <input id="sub" type="submit" value="new-character">
+        </form>
+        
     <%- include('../partials/footer') %>
