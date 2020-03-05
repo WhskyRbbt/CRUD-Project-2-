@@ -16,7 +16,7 @@ a {
   color: #00B7FF;
 }
 
-h1 {
+h1, h3 {
   display: grid;
   text-align: center;
   padding: auto 10px;
@@ -107,4 +107,10 @@ div {
 
 .navBar:last-child {
 float: right
+}
+
+#sub {
+  position: absolute;;
+  bottom: 3%;
+  align-content: space-between;
 }

@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include('../partials/header') %>
+
     <table id="list">
         <thead>
-          <tr>
-            <th>Name</th>
-            <th>Race</th>
-            <th>Class</th>
-            <th>Build</th>
+          <tr class="charOpt">
+            <th>Name</th></br>
+            <th>Race</th></br>
+            <th>Class</th></br>
+            <th>Build</th></br>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +21,5 @@
           </tbody>
         </table>
         <a href="/characters/new">Create New character</a>
-  </body>
-</html>
 
+        <%- include('../partials/footer') %>

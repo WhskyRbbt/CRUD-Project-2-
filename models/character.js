@@ -1,31 +1,30 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const charSchema = new mongoose.Schema({
-    charName: String,
-    email: String,
-    avatar: String,
-    googleId: String
-}, {
-    timestamps: true
-});
 
-const newCharSchema = new Schema({
+
+const charSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+        unique: true
+    },
     race: {
         type: String,
-        enum: ['Human', 'Feline', 'Lizard'],
+        enum: ['human', 'panther', 'lizard'],
         require: true
     },
     gender: {
         type: String,
-        enum: ['Male', 'Female', 'Non-specified' ],
+        enum: ['male', 'female'],
         require: true
     },
-    build: {
+    focus: {
         type: String,
-        enum: ['Warrior', 'Mage', 'Rogue'],
+        enum: ['warrior', 'mage', 'rogue'],
         required: true
     },
+    user:{type: Schema.Types.ObjectId, ref: 'User'}
 })
 
-module.exports = mongoose.model('Character', charSchema)
+module.exports = mongoose.model('characters', charSchema)

@@ -4,10 +4,9 @@ const charactersCtrl = require('../controllers/characters');
 
 
 /* GET users listing. */
-router.get('/', charactersCtrl.index);
-
-router.get('/new', charactersCtrl.new);
-router.post('/', charactersCtrl.create);
+//router.get('/', charactersCtrl.index);
+router.get('/characters/new', charactersCtrl.new);
+router.post('/users/:id/characters', charactersCtrl.create);
 
 
 

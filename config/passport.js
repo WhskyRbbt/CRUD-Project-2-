@@ -35,15 +35,14 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-passport.serializeChar(function(char, done) {
+passport.serializeUser(function(char, done) {
     done(null, char.id);
   });
   
-  passport.deserializeChar(function(id, done) {
+  passport.deserializeUser(function(id, done) {
     Char.findById(id, function(err, char) {
       done(err, char);
     });
   });
-  
   
   

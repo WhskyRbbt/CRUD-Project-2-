@@ -18,7 +18,7 @@ router.get('/logout', function(req, res){
 });
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Entrance Below', });
+  res.render('index', { title: 'Entrance Below'});
 });
 
 module.exports = router;
