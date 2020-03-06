@@ -24,6 +24,14 @@
 
 ![Dashboard](./public/images/dashboard.png "Dashboard")
 
+  From here, you can add a new character, and you have these optins:
+  
+  ![Creation Screen](./public/images/creation-screen.png "Creation Screen")
+  
+    And if you make a mistake, and needed to edit is, here is the edit screen, lol.
+    
+    ![Update](./public/images/update-screen.png "update")
+
 
   Future updates will include:
     1. New Races, new Battle-Focuses, and new Roles.
