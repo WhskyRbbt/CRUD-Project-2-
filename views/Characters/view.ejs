@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<h1> <%=name%>'s Den</h1>
+
+    <% chars.forEach((char, index) => { %>
+        <p><%= char.name %></p>
+        <p><%= char.race %></p>
+        <p><%= char.gender %></p>
+        <p><%= char.focus %></p>
+        <p><%= char.role %></p>
+    <% }) %>
+
+<%- include('../partials/footer') %>

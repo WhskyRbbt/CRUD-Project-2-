@@ -7,7 +7,7 @@ module.exports = {
 
 function index(req, res) {
     Character.find({}, (err, character) => {
-        res.render('users/index', {title: "FUUUCKKKK", character});
+        res.render('users/index', {title: "Main Hub", character});
     })
 }
 
