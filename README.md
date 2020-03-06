@@ -30,7 +30,7 @@
   
     And if you make a mistake, and needed to edit is, here is the edit screen, lol.
     
-    ![Update](./public/images/update-screen.png "update")
+    ![Update Character](./public/images/update-screen.png "update character")
 
 
   Future updates will include:
