@@ -5,9 +5,9 @@ module.exports = {
     new: newChar,
     create,
     viewChars,
-    edit
-    // update
-    //index
+    edit,
+    update,
+    delete: deleteChar
 };
 
 // function index(req, res) {
@@ -63,5 +63,21 @@ function edit(req,res) {
 };
     function update(req, res) {
         console.log(req.body);
-        // Character.findByIdAndUpdate()
-    }
+        let newChar = {
+            name: req.body.name,
+            gender: req.body.gender,
+            race: req.body.race,
+            focus: req.body.focus,
+            role: req.body.role
+        }
+        Character.findByIdAndUpdate(req.params.id, newChar, {new: true}, function(err, character) {
+            res.redirect('/users')
+        })
+        };
+
+        function deleteChar(req, res) {
+            Character.findByIdAndDelete(req.params.id, function(err) {
+                res.redirect('/users')
+            })
+        }
+        

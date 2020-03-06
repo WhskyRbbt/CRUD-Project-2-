@@ -43,7 +43,11 @@
                 <option value="crowd-control">Crowd Control</option>
             </select>        
         </br></br>
-            <input id="sub" type="submit" value="newChar">
+            <input id="sub" type="submit" value="Update">
         </form>
+
+        <form action="/users/<%=user.id%>/characters/<%= id %>?_method=DELETE" method="POST">
+            <input id="Del" type="submit" value="poop">
+        </form> 
         
     <%- include('../partials/footer') %>
