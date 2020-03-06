@@ -12,7 +12,7 @@ const charSchema = new Schema({
     },
     race: {
         type: String,
-        enum: ['human', 'panther', 'lizard'],
+        enum: ['Human', 'Pantherkin', 'Lizard-folk'],
         required: true,
         default: ""
     },

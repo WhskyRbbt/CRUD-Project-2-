@@ -2,11 +2,11 @@
 <h1> <%=name%>'s Den</h1>
 
     <% chars.forEach((char, index) => { %>
-       <div> <p><%= char.name %></p>
-        <p><%= char.race %></p>
-        <p><%= char.gender %></p>
-        <p><%= char.focus %></p>
-        <p><%= char.role %></p>
+       <div> <p><%= char.name %></p><br>
+        <p><%= char.race %></p><br>
+        <p><%= char.gender %></p><br>
+        <p><%= char.focus %></p><br>
+        <p><%= char.role %></p><br>
         <a href="/users/<%= user._id %>/characters/<%= char.id %>/edit"><button>edit</button></a>    
         </div>  
     <% }) %>
