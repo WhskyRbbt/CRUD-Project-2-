@@ -30,8 +30,8 @@
   
     And if you make a mistake, and needed to edit is, here is the edit screen, lol.
     
-    ![Update](./public/images/update-screen.png "update")
-
+![Update Screen](./public/images/update-screen.png "Update Screen")
+  
 
   Future updates will include:
     1. New Races, new Battle-Focuses, and new Roles.
