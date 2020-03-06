@@ -3,7 +3,7 @@
 
 ![Landing page](./public/images/landing page.png "Landing Page")
 
-![Login page](images//public/images/login.png "Login Page")
+![Login page](./public/images/login.png "Login Page")
 
 
 
