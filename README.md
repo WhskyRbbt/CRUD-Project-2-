@@ -20,7 +20,7 @@
 
   All this, as well as several libraries and add-ons, this all works together to create a seamless integration that ends with the results of a completed character. It's fun, but there is so much more to do.
 
-  If youre interested in seeing what kind of a character you can make, you can [Enter the Lair](https://git.heroku.com/crud-app-project-2.git) and start customizing your own character today!
+  If youre interested in seeing what kind of a character you can make, you can [Enter the Lair](https://crud-app-project-2.herokuapp.com/) and start customizing your own character today!
 
 ![Dashboard](./public/images/dashboard.png "Dashboard")
 
