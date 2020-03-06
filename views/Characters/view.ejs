@@ -2,11 +2,14 @@
 <h1> <%=name%>'s Den</h1>
 
     <% chars.forEach((char, index) => { %>
-        <p><%= char.name %></p>
+       <div> <p><%= char.name %></p>
         <p><%= char.race %></p>
         <p><%= char.gender %></p>
         <p><%= char.focus %></p>
         <p><%= char.role %></p>
+        <a href="/users/<%= user._id %>/characters/<%= char.id %>/edit"><button>edit</button></a>    
+        </div>  
     <% }) %>
 
+<br><br>
 <%- include('../partials/footer') %>

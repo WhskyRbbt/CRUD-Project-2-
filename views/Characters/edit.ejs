@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
 
-    <h1>LET'S PLAY GODS</h1>
-    <h3>Design your hero</h3>
+    <h1>LET'S PLAY GODS (again...)</h1>
+    <h3>Re-Design your hero</h3>
     
-    <form action="/users/<%=user.id%>/characters" method="POST" > 
+    <form action="/users/<%=user.id%>/characters/<%= id %>?_method=PUT" method="POST" > 
         <label for="name">Character Name:</label>
     </br>
-            <input required type="text" id="name" name="name" placeholder="Enter Name">
+            <input required type="text" id="name" name="name" value="<%= name %>">
         </br></br>
             <label for="race">Choose a race:</label>
         </br>
-            <select id="race" name="race">
-                <option disabled selected hidden>Select</option>
+            <select id="race" name="race" value="<%= race %>">
+                <option>Select</option>
                 <option value="Lizard-folk">Lizard-folk</option>
                 <option value="Pantherkin">Pantherkin</option>
                 <option value="Human">Human</option>
@@ -19,16 +19,16 @@
         </br></br>
             <label for="gender">Gender</label>
         </br>
-            <select id="gender" name="gender">
-                <option disabled selected hidden>Select</option>
+            <select id="gender" name="gender" value="<%= gender %>">
+                <option>Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
         <br><br>
             <label for="focus">Choose your combat focus:</label>
         </br>
-            <select id="focus" name="focus">
-                <option disabled selected hidden>Select</option>
+            <select id="focus" name="focus" value="<%= focus %>">
+                <option>Select</option>
                 <option value="warrior">Warrior</option>
                 <option value="mage">Mage</option>
                 <option value="rogue">Rogue</option>
@@ -36,8 +36,8 @@
         </br></br>
             <label for="role">Choose your battle role:</label>
         </br>
-            <select id="role" name="role">
-                <option disabled selected hidden>Select</option>
+            <select id="role" name="role" value="<%= role %>">
+                <option>Select</option>
                 <option value="damage-dealer">Damage Dealer</option>
                 <option value="healer">Healer</option>
                 <option value="crowd-control">Crowd Control</option>
