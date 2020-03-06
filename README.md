@@ -1,7 +1,7 @@
 # CRUD-Project-2-
   My CRUD app for this project is an app called "crud-app-project-2" I know, super original. It is a character creation app, that allows the user to log in, choose from either a list of characters to edit, or to add a completely new character to thier database. 
 
-![Landing page](./public/images/landing page.png "Landing Page")
+![Landing page](./public/images/landing-page.png "Landing Page")
 
 ![Login page](./public/images/login.png "Login Page")
 
@@ -22,7 +22,7 @@
 
   If youre interested in seeing what kind of a character you can make, you can [Enter the Lair](https://git.heroku.com/crud-app-project-2.git) and start customizing your own character today!
 
-![Dashboard](images//public/images/dashboard.png "Dashboard")
+![Dashboard](./public/images/dashboard.png "Dashboard")
 
 
   Future updates will include:
