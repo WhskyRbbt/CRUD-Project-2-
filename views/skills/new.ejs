@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<h1> <%=user.name%>'s Den</h1>
+<form action="/users/<%=user.id%>/characters/<%= charId %>/skills" method="POST">
+    <br>
+    <label for="focus">Choose Your Main Attack:</label>
+    <br>
+    <select id="attack" name="attack">Attack
+        <option disabled selected hidden>Select</option>
+        <option value="warrior">Swing</option>
+        <option value="cast">Cast</option>
+        <option value="arrow">Arrow</option>
+    </select>
+    <br>
+    <label for="focus">Choose Your Healing Ability:</label>
+    <br>
+    <select id="heal" name="heal">Heal
+        <option disabled selected hidden>Select</option>
+        <option value="heal">Heal</option>
+        <option value="raise">Raise</option>
+        <option value="shield">Shield</option>
+    </select>
+    <br>
+    <label for="focus">Choose Your Defensive:</label>
+    <br>
+    <select id="defense" name="defense">Defense
+        <option disabled selected hidden>Select</option>
+        <option value="parry">Parry</option>
+        <option value="reflect">Reflect</option>
+        <option value="dodge">Dodge</option>
+    </select>
+    <input id="sub" type="submit" value="Add Skills">
+</form>
+<br><br>
+
+<%- include('../partials/footer') %>

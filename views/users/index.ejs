@@ -2,12 +2,13 @@
 <h1>Dragon's Den</h1>
 
     <ul>
-    <% character.forEach((char, index) => { %>
+    <% characters.forEach((char, index) => { %>
         <li style="color: rgb(228, 8, 8);" > <%= char.name %> </li> <br>
         <li style="color: royalblue;" > Race: <%= char.race %> </li> <br> 
         <li style="color: royalblue;" > Gender:<%= char.gender %> </li> <br>
         <li style="color: royalblue;" > Battle Focus: <%= char.focus %> </li> <br>
-        <li style="color: royalblue;" > Battle Role:<%= char.role %> </li>  
+        <li style="color: royalblue;" > Battle Role:<%= char.role %> </li>  <br>
+        <li style="color: royalblue;" > poop:<%= char.skill.attack %> </li>  
      <br><br>
     <% }) %>
     </ul>

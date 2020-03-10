@@ -3,50 +3,46 @@
     <h1>LET'S PLAY GODS (again...)</h1>
     <h3>Re-Design your hero</h3>
     
-    <form action="/users/<%=user.id%>/characters/<%= id %>?_method=PUT" method="POST" > 
+    <form action="/users/<%=user.id%>/characters/<%= char.id %>?_method=PUT" method="POST" > 
         <label for="name">Character Name:</label>
     </br>
-            <input required type="text" id="name" name="name" value="<%= name %>">
+            <input required type="text" id="name" name="name" value="<%= char.name %>">
         </br></br>
             <label for="race">Choose a race:</label>
         </br>
-            <select id="race" name="race" value="<%= race %>">
-                <option>Select</option>
-                <option value="Lizard-folk">Lizard-folk</option>
-                <option value="Pantherkin">Pantherkin</option>
-                <option value="Human">Human</option>
+            <select id="race" name="race" value="<%= char.race %>">
+                <option <%- char.race === "Lizard-folk" ? "selected" : "" %> value="Lizard-folk">Lizard-folk</option>
+                <option <%- char.race === "Pantherkin" ? "selected" : "" %> value="Pantherkin">Pantherkin</option>
+                <option <%- char.race === "Human" ? "selected" : "" %> value="Human">Human</option>
             </select>
         </br></br>
             <label for="gender">Gender</label>
         </br>
-            <select id="gender" name="gender" value="<%= gender %>">
-                <option>Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+            <select id="gender" name="gender" value="<%= char.gender %>">
+                <option <%- char.gender === "male" ? "selected" : "" %> value="male">Male</option>
+                <option <%- char.gender === "female" ? "selected" : "" %> value="female">Female</option>
             </select>
         <br><br>
-            <label for="focus">Choose your combat focus:</label>
+            <label for="focus">Choose your combat focus:</label> 
         </br>
-            <select id="focus" name="focus" value="<%= focus %>">
-                <option>Select</option>
-                <option value="warrior">Warrior</option>
-                <option value="mage">Mage</option>
-                <option value="rogue">Rogue</option>
+            <select id="focus" name="focus" value="<%= char.focus %>">
+                <option <%- char.focus === "warrior" ? "selected" : "" %> value="warrior">Warrior</option>
+                <option <%- char.focus === "mage" ? "selected" : "" %> value="mage">Mage</option>
+                <option <%- char.focus === "rogue" ? "selected" : "" %> value="rogue">Rogue</option>
             </select>
         </br></br>
             <label for="role">Choose your battle role:</label>
         </br>
-            <select id="role" name="role" value="<%= role %>">
-                <option>Select</option>
-                <option value="damage-dealer">Damage Dealer</option>
-                <option value="healer">Healer</option>
-                <option value="crowd-control">Crowd Control</option>
+            <select id="role" name="role" value="<%= char.role %>">
+                <option <%- char.role === "damage-dealer" ? "selected" : "" %> value="damage-dealer">Damage Dealer</option>
+                <option <%- char.role === "healer" ? "selected" : "" %> value="healer">Healer</option>
+                <option <%- char.role === "crowd-control" ? "selected" : "" %> value="crowd-control">Crowd Control</option>
             </select>        
         </br></br>
             <input id="sub" type="submit" value="Update">
         </form>
 
-        <form action="/users/<%=user.id%>/characters/<%= id %>?_method=DELETE" method="POST">
+        <form action="/users/<%=user.id%>/characters/<%= char.id %>?_method=DELETE" method="POST">
             <input id="Del" type="submit" value="DELETE">
         </form> 
         

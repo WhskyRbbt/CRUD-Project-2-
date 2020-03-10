@@ -15,42 +15,37 @@ function newChar(req, res) {
 }
 
 function create(req, res) {
-    console.log("REQ BODY ", req.body);
+    // console.log("REQ BODY ", req.body);
     req.body.user = req.user._id 
     let char = new Character(req.body);
-    console.log(char)
+    // console.log(char)
     Promise.all([char.save()])
     .then(function() {
-        res.redirect('/users')
+        res.redirect(`/users/${req.body.user}/characters/${char.id}/skills/new`)
     })
         
 };
 
 function viewChars(req, res) {
-    Character.find({user: req.user._id}, (err, chars) => {
+    Character.find({user: req.user._id})
+    .populate('skill')
+    .exec( (err, chars) => {
+        console.log(chars)
         res.render('characters/view', {
             chars, 
             user: req.user,
             name: req.user.name,
-            title: "View Characters"
-        })
+            title: "View Characters"})
     })
 }
 
-    // function update(req,res) {
-    //     console.log("this is to be upatded = " + req.body);
-    // }
+
 function edit(req,res) {
     Character.findById(req.params.id, (function (err, character) {
         res.render("characters/edit", {
             title: "edit character",
             user: req.user,
-            name: character.name,
-            gender: character.gender,
-            race: character.race,
-            focus: character.focus,
-            role: character.role,
-            id: character.id
+            char: character
         })
 
     }))

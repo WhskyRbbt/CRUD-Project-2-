@@ -34,7 +34,8 @@ const charSchema = new Schema({
         required: true,
         default: "damage-dealer"
     },
-    user: {type: Schema.Types.ObjectId, ref: 'User'}
+    user: {type: Schema.Types.ObjectId, ref: 'User'}, 
+    skill: {type: Schema.Types.ObjectId, ref: 'Skill'}, 
 })
 
 module.exports = mongoose.model('Character', charSchema)

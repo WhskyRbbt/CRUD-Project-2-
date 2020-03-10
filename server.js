@@ -18,6 +18,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var charsRouter = require('./routes/characters');
 var usersRouter = require('./routes/users');
+var skillsRouter = require('./routes/skills');
 
 
 // view engine setup
@@ -43,6 +44,7 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/', charsRouter);
 app.use('/users', usersRouter);
+app.use('/', skillsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

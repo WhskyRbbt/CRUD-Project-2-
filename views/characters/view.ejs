@@ -1,13 +1,22 @@
 <%- include('../partials/header') %>
 <h1> <%=name%>'s Den</h1>
-
+<div class="edit"></div>
     <% chars.forEach((char, index) => { %>
-       <div> <p><%= char.name %></p><br>
-        <p><%= char.race %></p><br>
-        <p><%= char.gender %></p><br>
-        <p><%= char.focus %></p><br>
-        <p><%= char.role %></p><br>
-        <a href="/users/<%= user._id %>/characters/<%= char.id %>/edit"><button>edit</button></a>    
+        <p>Name :
+            <%= char.name %></p><br>
+        <p>Race :
+            <%= char.race %></p><br>
+        <p>Gender :
+            <%= char.gender %></p><br>
+        <p>Focus :
+            <%= char.focus %></p><br>
+        <p>Role :
+            <%= char.role %></p><br>
+        <p>Skills :
+            <%= char.skill.attack %></p><br>
+        <a href="/users/<%= user._id %>/characters/<%= char.id %>/edit"><button>Edit</button></a>  
+        <a href="/users/<%= user._id %>/characters/<%= char.id %>/skills/new"><button>Add Skill</button></a>    
+  
         </div>  
     <% }) %>
 

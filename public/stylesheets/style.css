@@ -116,3 +116,7 @@ select, #name {
 .navBar {
   background-color: royalblue;
 }
+
+.edit   {
+  display: grid;
+}
