@@ -5,19 +5,19 @@ const Schema = mongoose.Schema;
 const skillSchema = new mongoose.Schema({
     attack: {
         type: String,
-        enum: ['swing', 'cast', 'arrow'],        
+        enum: ['Swing', 'Cast', 'Arrow'],        
         required: true,
         default: ""
 }, 
     heal: {
         type: String,
-        enum: ['heal', 'raise', 'shield'],
+        enum: ['Heal', 'Raise', 'Shield'],
         required: true,
         default: ""
 }, 
     defense: {
         type: String,
-        enum: ['parry', 'reflect', 'dodge'],
+        enum: ['Parry', 'Reflect', 'Dodge'],
         required: true,
         default: ""
 },    

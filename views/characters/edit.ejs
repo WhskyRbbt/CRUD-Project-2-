@@ -19,24 +19,24 @@
             <label for="gender">Gender</label>
         </br>
             <select id="gender" name="gender" value="<%= char.gender %>">
-                <option <%- char.gender === "male" ? "selected" : "" %> value="male">Male</option>
-                <option <%- char.gender === "female" ? "selected" : "" %> value="female">Female</option>
+                <option <%- char.gender === "Male" ? "selected" : "" %> value="Male">Male</option>
+                <option <%- char.gender === "Female" ? "selected" : "" %> value="Female">Female</option>
             </select>
         <br><br>
             <label for="focus">Choose your combat focus:</label> 
         </br>
             <select id="focus" name="focus" value="<%= char.focus %>">
-                <option <%- char.focus === "warrior" ? "selected" : "" %> value="warrior">Warrior</option>
-                <option <%- char.focus === "mage" ? "selected" : "" %> value="mage">Mage</option>
-                <option <%- char.focus === "rogue" ? "selected" : "" %> value="rogue">Rogue</option>
+                <option <%- char.focus === "Warrior" ? "selected" : "" %> value="Warrior">Warrior</option>
+                <option <%- char.focus === "Mage" ? "selected" : "" %> value="Mage">Mage</option>
+                <option <%- char.focus === "Rogue" ? "selected" : "" %> value="Rogue">Rogue</option>
             </select>
         </br></br>
             <label for="role">Choose your battle role:</label>
         </br>
             <select id="role" name="role" value="<%= char.role %>">
-                <option <%- char.role === "damage-dealer" ? "selected" : "" %> value="damage-dealer">Damage Dealer</option>
-                <option <%- char.role === "healer" ? "selected" : "" %> value="healer">Healer</option>
-                <option <%- char.role === "crowd-control" ? "selected" : "" %> value="crowd-control">Crowd Control</option>
+                <option <%- char.role === "Damage-dealer" ? "selected" : "" %> value="Damage-dealer">Damage Dealer</option>
+                <option <%- char.role === "Healer" ? "selected" : "" %> value="healer">Healer</option>
+                <option <%- char.role === "Crowd-control" ? "selected" : "" %> value="Crowd-control">Crowd Control</option>
             </select>        
         </br></br>
             <input id="sub" type="submit" value="Update">

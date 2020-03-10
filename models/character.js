@@ -18,21 +18,21 @@ const charSchema = new Schema({
     },
     gender: {
         type: String,
-        enum: ['male', 'female'],
+        enum: ['Male', 'Female'],
         required: true,
         default: ""
     },
     focus: {
         type: String,
-        enum: ['warrior', 'mage', 'rogue'],
+        enum: ['Warrior', 'Mage', 'Rogue'],
         required: true,
         default: ""
     },
     role: {
         type: String,
-        enum: ['damage-dealer', 'healer', 'crowd-control'],
+        enum: ['Damage-dealer', 'Healer', 'Crowd-control'],
         required: true,
-        default: "damage-dealer"
+        default: ""
     },
     user: {type: Schema.Types.ObjectId, ref: 'User'}, 
     skill: {type: Schema.Types.ObjectId, ref: 'Skill'}, 

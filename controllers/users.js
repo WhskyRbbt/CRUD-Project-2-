@@ -11,7 +11,7 @@ function index(req, res) {
     .populate('skill')
     .exec( (err, characters) => {
         console.log(characters)
-        res.render('users/index', {characters: characters, title: "Hello"})
+        res.render('users/index', {characters, title: "Hello"})
     })
 }
 

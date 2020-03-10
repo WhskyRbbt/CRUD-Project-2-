@@ -3,7 +3,7 @@
 <div class="edit"></div>
     <% chars.forEach((char, index) => { %>
         <p>Name :
-            <%= char.name %></p><br>
+              <%= char.name %></p><br>
         <p>Race :
             <%= char.race %></p><br>
         <p>Gender :
@@ -12,8 +12,10 @@
             <%= char.focus %></p><br>
         <p>Role :
             <%= char.role %></p><br>
-        <p>Skills :
-            <%= char.skill.attack %></p><br>
+        <p> Skills : <hr></p>
+        <p><%= char.skill.attack %><br>
+            <%= char.skill.heal %><br>
+            <%= char.skill.defense %></p><br>
         <a href="/users/<%= user._id %>/characters/<%= char.id %>/edit"><button>Edit</button></a>  
         <a href="/users/<%= user._id %>/characters/<%= char.id %>/skills/new"><button>Add Skill</button></a>    
   

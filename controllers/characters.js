@@ -30,7 +30,7 @@ function viewChars(req, res) {
     Character.find({user: req.user._id})
     .populate('skill')
     .exec( (err, chars) => {
-        console.log(chars)
+        // console.log(chars)
         res.render('characters/view', {
             chars, 
             user: req.user,
@@ -51,7 +51,7 @@ function edit(req,res) {
     }))
 };
     function update(req, res) {
-        console.log(req.body);
+        // console.log(req.body);
         let newChar = {
             name: req.body.name,
             gender: req.body.gender,

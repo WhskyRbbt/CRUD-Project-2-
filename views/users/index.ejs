@@ -3,12 +3,14 @@
 
     <ul>
     <% characters.forEach((char, index) => { %>
-        <li style="color: rgb(228, 8, 8);" > <%= char.name %> </li> <br>
-        <li style="color: royalblue;" > Race: <%= char.race %> </li> <br> 
-        <li style="color: royalblue;" > Gender:<%= char.gender %> </li> <br>
-        <li style="color: royalblue;" > Battle Focus: <%= char.focus %> </li> <br>
-        <li style="color: royalblue;" > Battle Role:<%= char.role %> </li>  <br>
-        <li style="color: royalblue;" > poop:<%= char.skill.attack %> </li>  
+        <li style="color: rgb(228, 8, 8);">Character Name:  <%= char.name %> </li> <br>
+        <li style="color: royalblue;" > Race:  <%= char.race %> </li> <br> 
+        <li style="color: royalblue;" > Gender:  <%= char.gender %> </li> <br>
+        <li style="color: royalblue;" > Battle Focus:  <%= char.focus %> </li> <br>
+        <li style="color: royalblue;" > Battle Role:   <%= char.role %> </li>  <br> <br>
+        <li style="color: royalblue;" > Main Attack:    <%= char.skill.attack %> </li>  <br>
+        <li style="color: royalblue;" > Main Heal:    <%= char.skill.heal %> </li> <br> 
+        <li style="color: royalblue;" > Main Defense:    <%= char.skill.defense %> </li>  <br> <hr>
      <br><br>
     <% }) %>
     </ul>
